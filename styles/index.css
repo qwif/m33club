@@ -11,7 +11,7 @@
 
 @media (max-width: 767px) {
   .container {
-    max-width: 340px;
+    max-width: 390px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -19,7 +19,7 @@
 
 @media (max-width: 480px) {
   .container {
-    max-width: 320px;
+    max-width: 288px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -111,12 +111,15 @@
 .social {
   display: flex;
   align-items: center;
-  column-gap: 24px;
+}
+
+.social a:last-child {
+  margin-left: 24px;
 }
 
 @media (max-width: 767px) {
-  .social {
-    column-gap: 16px;
+  .social a:last-child {
+    margin-left: 16px;
   }
 }
 
@@ -178,6 +181,14 @@
 @media (max-width: 767px) {
   .main__title {
     font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main__title {
+    font-size: 24px;
     line-height: 1.1;
     margin-bottom: 16px;
   }

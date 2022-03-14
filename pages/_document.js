@@ -12,6 +12,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
         <link href="favicon.ico" rel="shortcut icon" />
+        <meta name="theme-color" content="#000000" />
       </Head>
       <body>
         <Main />

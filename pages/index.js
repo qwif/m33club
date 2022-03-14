@@ -15,23 +15,23 @@ export default function Home() {
     gsap.to(footerItem.current, {
       duration: 0.8,
       opacity: 1,
-      ease: 'power3.easeOut',
-      delay: 0.2,
+      ease: 'power3.easeIn',
+      delay: 0.6,
     })
 
     gsap.to(backgroundItem.current, {
       duration: 0.8,
       opacity: 1,
-      ease: 'power3.easeOut',
-      delay: 0.2,
+      ease: 'power3.easeIn',
+      delay: 0.6,
     })
 
     gsap.to(logoItem.current, {
-      duration: 0.6,
+      duration: 0.8,
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 0.8,
+      delay: 1,
     })
 
     gsap.fromTo(
@@ -47,7 +47,7 @@ export default function Home() {
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 1.2,
+      delay: 1.6,
     })
 
     gsap.to(descriptionItem.current, {
@@ -55,7 +55,7 @@ export default function Home() {
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 1.4,
+      delay: 1.8,
     })
 
     gsap.to(headerItem.current, {
@@ -63,7 +63,7 @@ export default function Home() {
       opacity: 1,
       y: 32,
       ease: 'power3.easeOut',
-      delay: 2,
+      delay: 2.2,
     })
   }, [])
 
