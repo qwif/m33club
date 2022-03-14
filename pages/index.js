@@ -12,26 +12,12 @@ export default function Home() {
   let descriptionItem = React.useRef(null)
 
   React.useEffect(() => {
-    gsap.to(footerItem.current, {
-      duration: 0.8,
-      opacity: 1,
-      ease: 'power3.easeIn',
-      delay: 0.6,
-    })
-
-    gsap.to(backgroundItem.current, {
-      duration: 0.8,
-      opacity: 1,
-      ease: 'power3.easeIn',
-      delay: 0.6,
-    })
-
     gsap.to(logoItem.current, {
-      duration: 0.8,
+      duration: 0.6,
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 1,
+      delay: 0,
     })
 
     gsap.fromTo(
@@ -39,31 +25,31 @@ export default function Home() {
       {
         rotation: 0,
       },
-      { rotation: 360, duration: 20, repeat: -1, ease: 'linear' }
+      { rotation: 360, duration: 24, repeat: -1, ease: 'linear' }
     )
 
     gsap.to(titleItem.current, {
-      duration: 0.4,
+      duration: 0.3,
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 1.6,
+      delay: 0.8,
     })
 
     gsap.to(descriptionItem.current, {
-      duration: 0.4,
+      duration: 0.3,
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 1.8,
+      delay: 1,
     })
 
     gsap.to(headerItem.current, {
-      duration: 0.4,
+      duration: 0.3,
       opacity: 1,
       y: 32,
       ease: 'power3.easeOut',
-      delay: 2.2,
+      delay: 1.2,
     })
   }, [])
 
@@ -71,6 +57,7 @@ export default function Home() {
     <div className="page">
       <Head>
         <title>М33</title>
+        <meta name="title" content="М33" />
         <meta
           name="description"
           content="Ночной клуб развлекательного комплекса М33. На сегодняшний день клуб является самой популярной площадкой в городе Архангельск, вместимостью до 2000 человек"
@@ -78,7 +65,14 @@ export default function Home() {
       </Head>
 
       <div className="page__background" ref={backgroundItem}>
-        <Image src="/images/main_bg.png" layout="fill" objectFit="cover" alt="" quality={100} />
+        <Image
+          src="/images/main_bg.png"
+          layout="fill"
+          objectFit="cover"
+          alt="Интерьер клуба"
+          quality={100}
+          priority={true}
+        />
       </div>
 
       <header className="header" ref={headerItem}>
@@ -88,24 +82,46 @@ export default function Home() {
             href="https://go.2gis.com/rg7ia"
             target="_blank"
             rel="noreferrer"
+            aria-label="Мы на карте"
           >
             <span className="location__icon">
-              <Image src="/images/pin.svg" width="36" height="36" alt="" quality={100} />
+              <Image
+                src="/images/pin.svg"
+                width="36"
+                height="36"
+                alt="Иконка – маркер"
+                quality={100}
+              />
             </span>
             <div className="location__address">​Московский проспект, 33</div>
           </a>
           <div className="header__social social">
-            <a href="https://t.me/m33_arh" target="_blank" rel="noreferrer">
+            <a
+              href="https://t.me/m33_arh"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Мы в Telegram"
+            >
               <span className="social__icon">
-                <Image src="/images/telegram.svg" width="36" height="36" alt="" quality={100} />
+                <Image
+                  src="/images/telegram.svg"
+                  width="36"
+                  height="36"
+                  alt="Иконка – Telegram"
+                  quality={100}
+                />
               </span>
-              <span className="social__label">Telegram</span>
             </a>
-            <a href="https://vk.com/m33_club" target="_blank" rel="noreferrer">
+            <a href="https://vk.com/m33_club" target="_blank" rel="noreferrer" aria-label="Мы в VK">
               <span className="social__icon">
-                <Image src="/images/vk.svg" width="36" height="36" alt="" quality={100} />
+                <Image
+                  src="/images/vk.svg"
+                  width="36"
+                  height="36"
+                  alt="Иконка – VK"
+                  quality={100}
+                />
               </span>
-              <span className="social__label">VK</span>
             </a>
           </div>
         </div>
