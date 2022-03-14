@@ -12,12 +12,26 @@ export default function Home() {
   let descriptionItem = React.useRef(null)
 
   React.useEffect(() => {
+    gsap.to(backgroundItem.current, {
+      duration: 0.6,
+      opacity: 1,
+      ease: 'power3.easeIn',
+      delay: 0.3,
+    })
+
+    gsap.to(footerItem.current, {
+      duration: 0.6,
+      opacity: 1,
+      ease: 'power3.easeIn',
+      delay: 0.3,
+    })
+
     gsap.to(logoItem.current, {
       duration: 0.6,
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 0,
+      delay: 0.6,
     })
 
     gsap.fromTo(
@@ -33,7 +47,7 @@ export default function Home() {
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 0.8,
+      delay: 1,
     })
 
     gsap.to(descriptionItem.current, {
@@ -41,7 +55,7 @@ export default function Home() {
       opacity: 1,
       y: -32,
       ease: 'power3.easeOut',
-      delay: 1,
+      delay: 1.2,
     })
 
     gsap.to(headerItem.current, {
@@ -49,7 +63,7 @@ export default function Home() {
       opacity: 1,
       y: 32,
       ease: 'power3.easeOut',
-      delay: 1.2,
+      delay: 1.4,
     })
   }, [])
 

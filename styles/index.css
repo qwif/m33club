@@ -45,6 +45,7 @@
 }
 
 .page__background {
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -242,6 +243,7 @@
 /* Footer */
 
 .footer {
+  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
