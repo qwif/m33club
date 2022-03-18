@@ -111,7 +111,7 @@ export default function Home() {
           </a>
           <div className="header__social social">
             <a
-              href="https://t.me/m33_arh"
+              href="https://t.me/club_m33"
               target="_blank"
               rel="noreferrer"
               aria-label="Мы в Telegram"
